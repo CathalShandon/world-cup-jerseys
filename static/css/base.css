@@ -4,8 +4,8 @@ html {
 
 body {
     background: url('/media/World_cup_kits_2022.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+    background-size: contain;
+    height: 60%;
     color: #555;
     font-family: 'Lato';
 }
