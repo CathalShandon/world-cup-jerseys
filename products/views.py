@@ -75,10 +75,10 @@ def product_teams(request):
     return render(request, 'products/product_teams.html')
 
 
-def qatar(request):
-    """ A view to return the qualified teams page """
+def product_qatar(request):
+    """ A view to return the qatar page """
 
-    return render(request, 'products/qatr.html')
+    return render(request, 'products/qatar.html')
 
 
 @login_required
