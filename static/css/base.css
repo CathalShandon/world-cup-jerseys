@@ -9,7 +9,10 @@ body {
     color: #555;
     font-family: 'Lato';
 }
-
+.logo-font my-1{
+    background-color: #9f0344;
+    columns: full-width;
+}
 /* from Bulma */
 .icon {
     align-items: center;
