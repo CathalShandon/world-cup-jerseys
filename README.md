@@ -77,7 +77,7 @@ To create an online blog about the different trails where user can login, view a
 
 6. As a **logged-in site user** I can **complete a comment on the trails** so that **other users can heard other peoples opinion**
 
-7. As a **logged-in site user** I can **like and unlike** the **trails**
+7. As a **logged-in site user** I can **add and delete** a **product**
 
 
 ## Website templates
@@ -89,10 +89,10 @@ To create an online blog about the different trails where user can login, view a
 I used Balsamiq to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the site on desktop, tablets and mobile devices.
 Page | Desktop Version | Mobile Version
 --- | --- | ---
-About us| ![Desktop about us in wireframe image](static/images/About_us_desktop.png) | ![Mobile about us page wireframe image](static/images/About_us_mobile.png)
+Landing | ![Desktop about us in wireframe image](static/images/About_us_desktop.png) | ![Mobile about us page wireframe image](static/images/About_us_mobile.png)
 Sign Up | ![Desktop sign up wireframe image](static/images/Signup_desktop.png) | ![Mobile sign up wireframe image](static/images/Signup_mobile.png)
-Trail | ![Desktop ask question wireframe image](static/images/trail_desktop.png) | ![Mobile ask question wireframe image](static/images/Trail_mobile.png)
-Trail Post | ![Desktop open question wireframe image](static/images/Trail_post_desktop.png) | ![Mobile open question wireframe image](static/images/Trail_post_mobile.png)
+Products | ![Desktop ask question wireframe image](static/images/trail_desktop.png) | ![Mobile ask question wireframe image](static/images/Trail_mobile.png)
+Product Post | ![Desktop open question wireframe image](static/images/Trail_post_desktop.png) | ![Mobile open question wireframe image](static/images/Trail_post_mobile.png)
 
 
 # 2. Features <a name="features"></a> 
@@ -113,6 +113,12 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     On screens with a width below 992px, the search bar is hidden and can be displayed by clicking on the 'Search' button that is present in the navbar.
 
+* Account
+
+    A user icon is located in the top right of the page, allowing the user access to manage their account and personal information.
+
+
+
 * Footer
 
     The top part of the footer is a full width div containing links to the Social Media pages for the business.
@@ -127,39 +133,71 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     Followed by the large hero photo of Kane, Ronaldo and Messi and a link to the jerseys for sale
 
+* Registration Page
+
+    The registration page is used by users to create a new account for the site.
+
+    Form validation is used to ensure all fields on the form are completed. If this validation fails, a message is shown to the user and the form is not submitted.
+
+    Once form validation has passed, the form will be submitted and the user will receive a confirmation email to verify their account.
+
+*  Login Page
+
+    The login page is used for users with an existing account to log in to the site.
+
+    If the user has not verified their account by clicking on the link in the email they are sent, they will be unable to log in.
+
+    A 'Forgot Password' link is present for users to recover their account in the event that they cannot remember the required information to log in.
+
+* Logout page
+
+    The logout page is used by users to log out if they are signed in, removing their session information.
+
+    The user will be taken to a confirmation page upon clicking the 'Logout' link, to ensure this is the action they wish to take.
+
+
 * Product List page
 
-    This page is available to both site visitors without a log-in and registered users who are logged in.
-    All the products which are reviewed and approved are listed in this page.
-    All the products have buttons to View the post detail page which is only visible for users who are logged in.
-    Edit button is also present in the post list if the post was created by the user who is viewing the page.
+    The products page displays a list of available products in a search term or, if the correct option is selected, all products are shown.
+    Each product card show an image of the product, the price (or price range), the category in which the product resides and the rating. 
 
 * Product Detail page
 
-    This page is available to everyone who are visting the site.
-    This page consists of a detailed view of the post which includes the content of the post, difficulty level and suitable dog size, in addition to the information displayed in the post list.
-    Also available on this page are other users' comments on this post. Only the approved comments are displayed on this page.
-    There is another function to allow other users to press the Like button and leave a comment regarding the post. The comment entered here need to be reviewed by the site owner before displayed in this post detail page.
+    The product info section of the product details page shows all the important information related to each product.
 
-* Create a Post page
+    The left part of the product info section is taken up by an image of the product. The image can be enlarged upon clicking to enable a better view. This is done within the page using bootstrap, rather than opening a new tab.
+
+    The name of the product is displayed at the top of this section and is also added to the title of the page.
+
+    Edit and Delete buttons are shown next to the rating if the current user has superuser privileges, allowing the requested action to take place.
+
+* Delivery Information
+
+    The delivery information section shows any stored address information for the user.
+
+    The information can be updated on this page, and these change will be used to autocomplete the delivery address when placing an order.
+
+    The information displayed in this section can also be updated when the user completes the shop journey if they check the 'Save this delivery information to my profile' box.
+
+* Create a Product page
 
     This page can be accessed by registered users who are logged in. Button link is located in the navbar for easy access to this page once logged in.
     There are messages to let users know which fields are required to create a post. Title field has to be a unique one, therefore there is a placeholder in the title field with a message ‘Your unique post title’ to advise you to create a unique title.
     Image upload is available but users can opt not to upload an image if they choose so.
     Once the create button is pressed, users will be directed to the post list page and a message to inform the user about the post is displayed below the navbar.
 
-* Edit post page
+* Edit product page
 
-    Edit post page is accessed by edit post button which is available in either post list or post detail page for users who are logged in. The button is visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page.
+    Edit post page is accessed by edit post button which is available in either product list or product detail page for users who are logged in. The button is visible for the user's own post only so that the post can only be edited by its own user or by superuser using the admin page.
 
     The required fields are identical to create post but all the entries of the post are retrieved so that users can edit only the field they wish to update.
 
     This page also contains a delete the post link which will display the page to confirm their intention to delete the post.
 
-* Delete Post page
+* Delete Product page
 
-    When the user presses ‘Delete This Post’ link from the edit post page, this Delete Post page displays and asks the user for confirmation to delete the post. Users can either click the Confirm Delete button or cancel and go back to Posts.
-    When the Confirm Delete button is pressed, the user will be redirected to the Post List page and 	a message will show below the navbar to inform that the post was deleted.
+    When the user presses ‘Delete This Product’ link from the edit post page, this Delete Post page displays and asks the user for confirmation to delete the post. Users can either click the Confirm Delete button or cancel and go back to Posts.
+    When the Confirm Delete button is pressed, the user will be redirected to the Product List page and 	a message will show below the navbar to inform that the post was deleted.
 
 * Account
 
@@ -208,6 +246,66 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
     A cart icon is also located in the top right corner of the page displaying the value of the current contents of the cart, and the number of items that are present in the cart.
 
     Clicking the cart icon will take the user to the cart page where they can complete their shopping journey.
+    
+* Checkout
+
+    The Checkout page is split into two main columns: Customer Details & Order Summary. The Checkout app also features a Checkout Success page once the order has been submitted, and a loading overlay whilst the order is being submitted.
+
+    The first section of this column asks for the customer to provide their name and email address. The name is required to ensure the correct delivery information is added to the package prior to it being dispatched, with the email address being used to send order confirmation to the customer. The customer is not required to sign in to complete their order, however if they are signed in, and have saved their delivery information, these fields will be populated.
+
+    If the user is already registered, and has delivery information stored, this information will be automatically populated.
+
+    The user also has the option to update or save their delivery information, which can be used to populate the form for future orders by ticking the checkbox below the form.
+
+    The payment element of the checkout app is provided by Stripe. Stripe is used as a secure payment method, and means that no card information is stored within the website database, with all information being provided back to the website via Webhooks.
+
+* Order Summary
+
+    The order summary section shows a compacted version of the data displayed in the Cart app.
+
+    The title of the Order Summary section shows the number of products contained within the cart.
+    Each item within the cart is listed, including the size (if applicable) and quantity.
+    Unlike the Cart app, in the Order Summary view only the Subtotal for each product is shown.
+    As with the Cart app, the Order Total, Delivery charage and Grand Total values are shown to give the customer the opportunity to confirm everything looks correct before their order is submitted.
+
+*  Checkout Success
+
+    Once all of the previous steps have been completed, the payment_intent.succeeded response has been received and confirmation that the order has been created in the database, the user is taken to the Checkout Success page.
+
+    Above the order summary itself, a message is shown advising the user that a confirmation email will be sent to them, confirming the details of their order.
+
+    The user is then provided with the Order Number and Order Date, which can be used in the event the customer needs to contact the business, speeding up the process of retrieving the relevant order.
+
+    The final section within the order summary box is the Billing Info section, providing a further recap of the Order Total, Deliverty charge and Grand Total of the order.
+
+*  Contact Us
+
+    The Contact Us page is linked to from various other places on the website and allows users to contact the business with any query they may have.
+
+    The form was purposefully left as basic as possible to give maximum flexibility to the user. The form consists of 3 text fields (Email, Subject and Message.)
+
+    Once all sections have been completed and the Submit button has been clicked, the information is stored in the database and the user is directed to the Contact Success page.
+
+    The Contact Success page contains a message stating Thank for getting in touch with us. We've got your message, and we'll be in touch as soon as possible., with a button returning the user to the main products page.
+
+* Toasts
+
+    Toasts appear in the top-right corner on the screen when any information needs to be relayed to the user. The toasts appear using a CSS animation which alters the location of the toast.
+
+    The toasts display messages under the categories of Success, Alert, Warning and Error.
+
+    The toasts have slightly different designs depending on the type of toast used.
+
+* Error 404 Page
+
+    If the user navigates to a page that does not exist, the 404.html page will render. This page has the same basic layout as the home page of the site, but displays different text content. The button, however, still returns the user to the main products page.
+
+
+* Error 500 Page
+
+    If the user navigates to a page that causes a response the server does not know how to handle, the 500.html page will render. This page has the same basic layout as the home page of the site, but displays different text content. The button, however, still returns the user to the main products page.
+
+
 
 # 3. Testing <a name="testing"></a> 
 
