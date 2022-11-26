@@ -103,32 +103,38 @@ Trail Post | ![Desktop open question wireframe image](static/images/Trail_post_d
 Navigation bar is featured on all pages at the top of the screen<br>
 This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via 'back button'<br>
 
-**For site visitors who are not logged in, the following are present in the navbar:**
+The navbar collapses to a hamburger menu once the window width drops below 992px to ensure all information is displayed comfortably to the user.
 
-* Home and Forum links
-* Buttons for Register and Login
+* Search Bar
 
-**For logged in users, the following are present**
+    The search bar is located in the middle of the navbar, above the links and can be used to search the site for products.
 
-* Home, Forum and Members links
-* Buttons for logout, create a Post and a button with their own username which opens their own profile to edit
+    The search term entered will be used to search the database for any products with matching information in either the product title, product description or product ingredients.
+
+    On screens with a width below 992px, the search bar is hidden and can be displayed by clicking on the 'Search' button that is present in the navbar.
 
 * Footer
 
-Consistent footer is present in all pages within the site which includes link to facebook, twitter and instagram
+    The top part of the footer is a full width div containing links to the Social Media pages for the business.
+
+    The footer is displayed on all pages other than the main landing page of the website, and sits at the bottom of each page.
+
+    The lower section of the footer is split into three columns with the first having a short About Us synopsis. The title of the column also links to the About Us page, but is not underlined due to the link also being available in the navbar.
+
+    The middle column contains Useful Links which direct to individual pages for the Refunds & Returns Policy, Postage & Packaging Policy and Privacy Policy
 
 * Landing Page
 
-Followed by the large hero map of the Beara peninsula, there is a brief introduction on the site and its purpose.
+    Followed by the large hero photo of Kane, Ronaldo and Messi and a link to the jerseys for sale
 
-* Post List page
+* Product List page
 
     This page is available to both site visitors without a log-in and registered users who are logged in.
-    All the posts which are reviewed and approved are listed in this page.
-    All the posts have buttons to View the post detail page which is only visible for users who are logged in.
+    All the products which are reviewed and approved are listed in this page.
+    All the products have buttons to View the post detail page which is only visible for users who are logged in.
     Edit button is also present in the post list if the post was created by the user who is viewing the page.
 
-* Post Detail page
+* Product Detail page
 
     This page is available to everyone who are visting the site.
     This page consists of a detailed view of the post which includes the content of the post, difficulty level and suitable dog size, in addition to the information displayed in the post list.
@@ -155,11 +161,14 @@ Followed by the large hero map of the Beara peninsula, there is a brief introduc
     When the user presses ‘Delete This Post’ link from the edit post page, this Delete Post page displays and asks the user for confirmation to delete the post. Users can either click the Confirm Delete button or cancel and go back to Posts.
     When the Confirm Delete button is pressed, the user will be redirected to the Post List page and 	a message will show below the navbar to inform that the post was deleted.
 
-* Members Page
+* Account
 
-    This page can be accessed from the navigation bar menu.
-    The images and usernames of the registered users can be viewed on this page.
-    There is View profile button in very user’s panel which will open the user’s individual  profile page
+    A user icon is located in the top right of the page, allowing the user access to manage their account and personal information.
+    Clicking on the icon displays a dropdown menu using Bootstrap's dropdown plugin with a number of options
+            -Login & Register are displayed if the user is not logged in.
+            -My Profile & Logout are displayed if the user is logged in.
+            -Admin Dashboard & Add Product are displayed if the user is a superuser.
+
 
 * Profile Detail page
 
@@ -194,6 +203,11 @@ Followed by the large hero map of the Beara peninsula, there is a brief introduc
     Once a user is logged in, the Login button in the navigation bar will be replaced with the Logout button.
     Users can simply click this button to log out and confirm to sign out. This will display the home page with a message to inform that the user has successfully logged out.
 
+* Cart
+
+    A cart icon is also located in the top right corner of the page displaying the value of the current contents of the cart, and the number of items that are present in the cart.
+
+    Clicking the cart icon will take the user to the cart page where they can complete their shopping journey.
 
 # 3. Testing <a name="testing"></a> 
 

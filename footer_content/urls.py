@@ -8,4 +8,4 @@ urlpatterns = [
     path('privacy/', views.PrivacyContent, name='privacy'),
     path('about/', views.AboutContent, name='about'),
 ]
-Footer
+

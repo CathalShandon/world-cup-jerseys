@@ -48,10 +48,12 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
+    'footer_content',
 
     # Other
     'crispy_forms',
     'storages',
+    'django_quill',
 ]
 
 MIDDLEWARE = [

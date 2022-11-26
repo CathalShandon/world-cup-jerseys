@@ -11,11 +11,26 @@
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <h1 class="text-center mb-5"><u>Postage & Packaging</u></h1>
-{% for c in postage %}
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-md-6 offset-md-3 mb-3">
-      {{c.content.html|safe}} {% endfor %}
+      <p>We ship world wide & products are shipped Monday to Thursday.</p>
+      <br>
+      <p>Please Make Sure To Re-Check Your Details:</p>
+      <br>
+      <p>Check the delivery address has the correct house number, street name, city and postcode. Please get in touch if you need to update it. Once dispatched we cannot change it and we are not responsible for you providing incorrect details.</p>
+      <br>
+      <p>It is helpful to leave an additional note attached to your order stating where you would like the package to be left if you are not at home and the parcel is missed.</p>
+      <br>
+      <p><strong>breakdown:</strong></p>
+      <ul>
+        <li>Products are sent via DPD or Mail.</li>
+        <li>Orders are tracked and you will be given an estimated delivery date.</li>
+        <li>Orders placed before 1pm Sunday – Wednesday will be shipped next day.</li>
+        <li>We ship 4 days a week Monday – Thursday, orders will be shipped next shipping day 
+          closest to when your order is placed unless specified otherwise in the additional information box when checking out.</li>
+      </ul>
     </div>
   </div>
 </div>
