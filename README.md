@@ -113,6 +113,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     On screens with a width below 992px, the search bar is hidden and can be displayed by clicking on the 'Search' button that is present in the navbar.
 
+    ![Beara Horse Trail mockup images](media/site/searchbar.png)
+
 * Account
 
     A user icon is located in the top right of the page, allowing the user access to manage their account and personal information.
@@ -129,9 +131,13 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     The middle column contains Useful Links which direct to individual pages for the Refunds & Returns Policy, Postage & Packaging Policy and Privacy Policy
 
+    ![Footer](media/site/footer.png)
+
 * Landing Page
 
     Followed by the large hero photo of Kane, Ronaldo and Messi and a link to the jerseys for sale
+
+    ![Landing](media/site/home.png)
 
 * Registration Page
 
@@ -160,6 +166,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     The products page displays a list of available products in a search term or, if the correct option is selected, all products are shown.
     Each product card show an image of the product, the price (or price range), the category in which the product resides and the rating. 
+
+    ![Jerseys](media/site/jerseys.png)
 
 * Product Detail page
 
@@ -247,6 +255,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     Clicking the cart icon will take the user to the cart page where they can complete their shopping journey.
     
+    ![cart](media/site/shopping_bag.png)
+
 * Checkout
 
     The Checkout page is split into two main columns: Customer Details & Order Summary. The Checkout app also features a Checkout Success page once the order has been submitted, and a loading overlay whilst the order is being submitted.
@@ -544,58 +554,198 @@ Ensure logout will redirect to the landing page with a notification for their lo
 
 # 4. Deployment <a name="deployment"></a> 
 
-### Deployment
-Here is the deployment procedure  that I have taken to deploy this project on Heroku
+- ### Github
 
-1. In the Heroku dashboard, click new, then enter the app name and specify the region.
+  - Before you start, a repository (repo) is required on Github which can be created in a number of ways.
 
-2. In the Add-on section in the resources tab, search postgres, then select Heroku Postgres and submit order from button in the popup window.
+    - #### Create A New Repo
 
-3. In the setting tab, click on Reveal Config Vars button then copy the value for DATABASE_URL key.
+      1. Log into Github.
+      2. In the top left corner of the page is a column titled 'Recent
+         Repositories' Click the button labelled 'New'.
+      3. Name the repository and click 'Create repository'.
+      4. Your new repository is now set up and ready to use.
 
-4. Create env.py directly under the repo directory same lavel as manage.py and make sure the file name is included in .gitignore as this is a setting for local development site in Gitpod. 
-Heroku Config vars need to be set accordingly including DATABASE_URL and SECRET_KEY
+    - #### Forking
 
-5. In setting.py file include followings:
+      Creating a forked repo creates a copy of a repo within
+      github account.
 
-    import os
+      How to Fork A Repository:
+
+      1. Sign in to Github and go to the required repo.
+      2. Locate the Fork button at the top right of the page.
+      3. Click the button then click 'Create Fork'.
+      4. You have now successfully forked the repo.
+
+    - #### Clone
+
+      Cloning a repo creates a copy of a repo on your
+      local machine.
+
+      How to Clone A Repository;
+
+      1. Sign in to Github and go to the required repo.
+      2. At the top of the page, above the files, is a button labelled
+         'Code'
+      3. Select the required option from HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+      4. Open git bash
+      5. Type 'git clone' and then paste the copied URL. Press Enter.
+
+- ### Django
+
+  This project is built on the Django framework.
+
+  Django can be installed by following the steps below:
+
+  1. In your chosen IDE type the command:  
+     `pip3 install django`
+  2. To create an name your project use the command:  
+     `django-admin startproject <your_project_name> .`
+  3. A gitignore file is an important addition as you can specify
+     which files should not be uploaded to the Github repo, such as
+     database credentials.
+
+     A gitignore file can be created in the CLI using the command:
+
+     `touch .gitignore`
+
+     The .gitignore file for this project can be found [here](.gitignore)
+
+  4. To check django has been installed and your project created successfully, type the following command:
+
+     `python3 manage.py runserver`
+
+     Following the link provided in the CLI should display the Django landing page.
+
+  5. Next, initial database migrations need to be completed. This can be achieved with the command:
+
+     `python3 manage.py migrate`
+
+     You can see the changes to be made without executing them with the command:
+
+     `python3 manage.py migrate --plan`
+
+  6. In order to have access to the admin panel, a superuser is required. This is created with the command:
+
+     `python3 manage.py createsuperuser`
+
+     This will then ask you to create a username and password with an optional email address.
+
+  7. Once these steps are completed you can push your changes to Github using the commands below in order, or with the interface in your chosen IDE:
+
+     ```
+     git add .
+     git commit -m "initial commit"
+     git push
+     ```
+
+[Back to top ⇧](#nibble-kitchen)
+
+### Heroku
+
+Heroku is the chosen cloud platform for the project, allowing the project to be built and deployed via a link to the Github Repo.
+
+1. Once you are logged in to Heroku, click the 'New' button in the top right corner of the page and select 'Create new app'.
+2. Select a name for your app (which must be unique!), select the closest region to you and click 'Create App'.
+3. Once the app has been created, select the resources tab, navigate to the 'Add-ons' section and search for 'Heroku Postgres'.
+4. Select 'Heroku Postgres', then under 'Plan name' choose 'Hobby Dev - Free' and click 'Submit Order Form'.
+
+To use Postgres with Django, additional tools are required, and can be installed via the CLI in your chose IDE.
+
+1.  In your CLI type the command:  
+    `pip3 install dj_database_url`
+2.  Once completed, enter the following command into the CLI:  
+    `pip3 install psycopg2-binary`
+3.  At the top of the settings.py file in your main project folder, and the line:
+    ```
     import dj_database_url
-    if os.path.isfile('env.py'):
-        import env
-    modify SECRET_KEY line to SECRET_KEY = os.
-    environ.get('SECRET_KEY')
+    ```
+4.  Scroll down in settings.py to the `DATABASES` section. Replace the code in this section with the code below.
 
-    Replace DATABASES as
+    ```
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(<DATABASE_URL_GOES_HERE>)
     }
+    ```
 
-6. In the Gitpod terminal, migrate the change by
-python3 manage.py migrate. Check the resource tab in heroku and choose 
-Heroku Postgres then ensure the changes are reflected in the database
+    The Postgres Database URL can be found in the settings tab of your app in Heroku, under the Config Vars section.
 
-7. Login to Cloudinary and copy the API Environment variable and paste in env.py and also Config Vars in Heroku.
+5.  As we are now connected to a new database, we need to repeat the previous migration steps. This is done by running the command:  
+    `python3 manage.py migrate`
 
-8. DISABLE_COLLECTSTATIC set to 1 in Config Vars in Heroku as the initial deployment does not contain static files yet.
+6.  We also need to create a new superuser with the command :  
+    `python3 manage.py createsuperuser`
 
-9. In setting.py configure followings:
- 
-    * Add 'cloudinary_storage', before 'django.contrib.staticfiles', and 'cloudinary' after it.
+7.  Before we commit these changes, we will need to alter the `DATABASES` section in settings.py to prevent the Postgres Database URL ending up in version control.
 
-    * Set STATICFILES_DIRS, STATICFILES_DIRS, STATIC_ROOT, MEDIA_URL and DEFAULT_FILE_STORAGE so that Django can use the directories appropriately.
+8.  This can be achieved by replacing the existing content of the `DATABASES` section with the code below.
 
-    * Set TEMPLATES_DIR just below BASE_DIR and insert TEMPLATES_DIR in TEMPLATES array
-    'DIRS': []
+    ```
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+    }
+    ```
 
-    * Set ALLOWED_HOSTS array as 'tailsontrails.herokuapp.com', 'localhost'
+9.  Gunicorn needs to be installed next, which acts as our web server. This is done with the command:
 
-10. Create Procfile with the contents 
+    `pip3 install gunicorn`
 
-    web: gunicorn tails_on_trails.wsgi
+10. We also need to create a `Procfile` to tell Heroku to create a web dyno. In the root directory of your app, create a file named `Procfile` and inside insert the code:
 
-11. In the deployment tab in Heroku page, connect to GitHub and search for the repository then Connect.
+    `web: gunicorn PROJECT_NAME_HERE.wsgi:application`
 
-    Click on Deploy Branch
+11. In Heroku, we need to prevent the collection of static files until we have set up AWS. This is achieved by navigating to the Settings tab in Heroku, selecting the Config_Vars section and entering `DISABLE_COLLECTSTATIC` in the `KEY` field, and `1` in the `VALUE` field and clicking the 'Add' button.
+
+    When the site is deployed at this stage, no static files will be present, but this will be rectified later.
+
+12. In order to allow your project to be viewed when deployed to Heroku, we need to add the Project URL to the `ALLOWED_HOSTS` section of settings.py
+    ```
+    ALLOWED_HOSTS = ['PROJECT_NAME_HERE.herokuapp.com', 'localhost', '127.0.0.1']
+    ```
+13. The changes can now be committed and pushed to Github. Once this has been done, we can push the changes to Heroku with the command:
+
+        `git push heroku main'
+
+
+### Stripe
+
+Stripe is used to handle the checkout process when a payment is made. A Stripe account is needed. You can sign up [here](https://stripe.com/en-gb).
+
+#### Payments
+
+1. To set up Stripe payments you can follow the guide available [here](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
+
+#### Webhooks
+
+1. To set up a webhook, sign into your Stripe account and click `Developers` located in the top right of the navbar.
+2. In the side bar on the left of the page, click `Webhooks`, then `Add endpoint` on the right side of the page.
+3. Enter your Heroku project name, checkout app name, followed by wh into the `Endpoint URL` field. It should look something like this:
+   ```
+   https://your-app-name.herokuapp.com/checkout/wh/
+   ```
+4. Click `+ Select events` and check `Select all events` at the top of the page. Click `Add events` at the bottom of the page, followed by `Add endpoint` on the next page.
+5. The webhook has now been created and should have generated a secret key. We will need this to add to the Heroku Config Vars.
+6. Open your app on Heroku and navigate to the `Config Vars` section under the `Settings` tab. You will need the secret key just generated for your webhook, in addition to your Publishable key and secret key that you can find on the [Stripe API keys page](https://dashboard.stripe.com/test/apikeys).
+7. Add these values and key pairs to the Config Vars:
+   ```
+   STRIPE_PUBLIC_KEY = 'insert your stripe publishable key'
+   STRIPE_SECRET_KEY = 'insert your secret key'
+   STRIPE_WH_SECRET = 'insert your webhooks secret key'
+   ```
+8. In setting.py in your Django project, insert the following near the bottom of the file:
+   ```
+   STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+   STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+   STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 # 5. Technologies Used <a name="technology-used"></a>  <a name="Home"></a>
