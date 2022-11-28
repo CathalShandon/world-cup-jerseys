@@ -1,13 +1,15 @@
 # World Cup Jerseys
 
-Straddling counties Cork and Kerry, the Beara peninsula in southwest Ireland is one of Ireland’s most compelling and beautiful locations. The Miskish and the Caha mountains form the rugged spine of the peninsula which pokes into the wild Atlantic ocean ensuring that the coastline is ever-present. 
+WorldSoccerShop is your go-to place for soccer jerseys and we’re the one-stop-shop for followers of every team to find the best collection of jerseys and unique customizations from around the world.
 
-This maritime influence allows subtropical trees and shrubs to escape domesticity and go native in the endless hedgerows lining the leisurely roads that meander between Beara’s cosy, colourful villages and parishes. The peninsula is densely studded with Bronze Age remains: wedge tombs, stone circles and standing stones. 
+The site is fully responsive and was built using the Django framework in Python.
 
-The Beara Bridle Way is a  linear route. Riders can start in Clonglaskin west of Castletownbere or in Allihies or Urhan. There is a short loop route in Allihies and plans are in place two extend the trail and make three loops. Parking is available in Clonglaskin, Allihies , by the Urhan  Inn  and Travara beach  .
+The payment system used for the site is called Stripe. The system is set up in a 'dummy' mode and will not accept real card details.
+
+World Cup Jersey is an e-commerce site offering various confections.
 
 **View the live site [here](https://beara-bridle-trail.herokuapp.com/)**
-![Beara Horse Trail mockup images](static/images/mockup.png)
+![World Cup Jersey mockup images](static/images/mockup.png)
 
 
 
@@ -131,7 +133,7 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     The middle column contains Useful Links which direct to individual pages for the Refunds & Returns Policy, Postage & Packaging Policy and Privacy Policy
 
-    ![Footer](media/site/footer.png)
+    ![Footer](media/site/Footer.png)
 
 * Landing Page
 
@@ -179,6 +181,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     Edit and Delete buttons are shown next to the rating if the current user has superuser privileges, allowing the requested action to take place.
 
+    ![Product Detail](media/site/product_detail.png)
+
 * Delivery Information
 
     The delivery information section shows any stored address information for the user.
@@ -221,6 +225,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
     This page can be accessed by the View Profile button in the Members page or Post detail page if the user has their post displayed in the page.
     The page includes the image that the user posted and some brief description about them if they opted to enter any fields.
     Each user’s empty profile is created when they register to the site so every registered user has their own profile, but they can leave all the fields blank if they wish.
+
+    ![Profile detail](media/site/profile.png)
 
 * Profile Edit page
 
@@ -269,6 +275,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
     The payment element of the checkout app is provided by Stripe. Stripe is used as a secure payment method, and means that no card information is stored within the website database, with all information being provided back to the website via Webhooks.
 
+    ![Checkout](media/site/Checkout.png)
+
 * Order Summary
 
     The order summary section shows a compacted version of the data displayed in the Cart app.
@@ -277,6 +285,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
     Each item within the cart is listed, including the size (if applicable) and quantity.
     Unlike the Cart app, in the Order Summary view only the Subtotal for each product is shown.
     As with the Cart app, the Order Total, Delivery charage and Grand Total values are shown to give the customer the opportunity to confirm everything looks correct before their order is submitted.
+
+    ![Order](media/site/Order_detail.png)
 
 *  Checkout Success
 
@@ -297,6 +307,8 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
     Once all sections have been completed and the Submit button has been clicked, the information is stored in the database and the user is directed to the Contact Success page.
 
     The Contact Success page contains a message stating Thank for getting in touch with us. We've got your message, and we'll be in touch as soon as possible., with a button returning the user to the main products page.
+
+    ![Contact](media/site/Contact_page.png)
 
 * Toasts
 
