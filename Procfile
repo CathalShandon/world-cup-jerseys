@@ -1,1 +1,1 @@
-web: gunicorn world_cup_jerseys.wsgi:application
+web: gunicorn world_cup_jerseys.wsgi:
