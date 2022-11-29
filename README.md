@@ -41,15 +41,15 @@ World Cup Jersey is an e-commerce site offering various confections.
 
 # 1. User Experience (UX) <a name="ux"></a> 
 ### **Project goals:**
-To create an online blog about the different trails where user can login, view and comment and like the trails.
-- To enable users to comment and like/unlike the trails.
+To create an online website that where user can login and buy jerseys.
+- To enable users to edit profile and delivery info.
 - To enable to navigate with ease with through the site.
 - To ensure a safe environment in which to interact anonymously with secure account set-up.
 - To ensure a responsive site accessible to all, across multiple devices.
 
 ### **Site owner goal:**
 - To enable users to navigate with ease and read content.
-- To have the ability to delete posts and deactivate account users when necessary.
+- To have the ability to buy products and deactivate account users when necessary.
 - To enable users to register their own accounts and manage passwords.
 - A separate ‘site owner’ login to implement secure administration of the site.
 - To ensure the site is fully responsive and accessible site for all users across multiple devices
@@ -77,7 +77,7 @@ To create an online blog about the different trails where user can login, view a
 
 5. As a **site user** I can **locate the social media accounts** so that **I can follow their updates**
 
-6. As a **logged-in site user** I can **complete a comment on the trails** so that **other users can heard other peoples opinion**
+6. As a **logged-in site user** I can **complete a purchase s** so that **I can get a product deliveried**
 
 7. As a **logged-in site user** I can **add and delete** a **product**
 
@@ -333,19 +333,19 @@ The navbar collapses to a hamburger menu once the window width drops below 992px
 
 ### Responsiveness 
 
-Throughout the site is tested to ensure all pages are displayed appropriately in all screen sizes
+Throughout the site is tested to ensure all pages are displayed appropriately in all screen sizes.
 
 ## Testing User Stories
 
-### 1. As a Site Admin I can create, read, update and delete trails and comments so that I can manage the site content
+### 1. As a Site Admin I can create, read, update and delete products so that I can manage the site content
 
-* An admin site has been provided so that the Site Admin can manage trails and comments.
+* An admin site has been provided so that the Site Admin can manage products.
 
-* Trails and comments can be created, read, updated and deleted from the site.
+* Products can be created, read, updated and deleted from the site.
 
-* Trails and comments main fields are being displayed for the Site Admin to identify them easily.
+* Products main fields are being displayed for the Site Admin to identify them easily.
 
-* Trails and comments can be filtered and searched to narrow down a specific group.
+* Products can be filtered and searched to narrow down a specific group.
 
 ### 2. As a logged-in site user I can log out of my account so that other users cannot access my account.
 
@@ -357,40 +357,16 @@ Throughout the site is tested to ensure all pages are displayed appropriately in
 
 * Registered Site Users are not able to gain any access of any other user account.
 
-### 3. As a Site User I can register an account so that I can create trails leave comments and like trails.
 
-* Account registration has been provided for Site User.
-
-* Registered Site Users are given the possibility to submit trails and comments.
-
-* Registered Site Users are able to edit and delete their own trails.
-
-* Registered Site Users are able to like and unlike trails.
-
-### 4.As a site user I can intuitively navigate the site so that the layout of the site is consistent.
+### 3.As a site user I can intuitively navigate the site so that the layout of the site is consistent.
 
 * The site is easy to naviagte and easy to use across all devices.
 
-### 5.As a site user I can locate the social media accounts so that I can follow their updates.
+### 4.As a site user I can locate the social media accounts so that I can follow their updates.
 
 * The links facebook, twitter all allow users to click on and follow the creators more on social media
 
-### 6.As a logged-in site user I can complete a comment on the trails so that other users can heard other peoples opinion.
-
-* A Leave comments on trail page has been provided for registered Site Users.
-
-* A comment form is available in the trail post page for the Site Users to be able to comment on the trail posts.
-
-* A leave comment button is displayed to the registered Site Users under the trail content inside the trail page.
  
-
-### 7.As a logged-in site user I can like and unlike the trails.
-
-* Like and unlike buttons are provided for registered Site Users next to each trail.
-
-* Registered Site Users can like or unlike others trails.
-
-
 
 ## Code Validation
 
