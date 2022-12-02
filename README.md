@@ -383,7 +383,12 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 
 W3C CSS Validator found no errors or warnings on my CSS.
 
-![CSS validation image](static/images/css_validation.png)
+![CSS validation image](media/testing/css-test.png)
+
+### Javascript 
+Checking my JS files with jshint
+
+![JS validation image](media/testing/js-testing.png)
 
 ### Python
 
@@ -419,7 +424,7 @@ Visual inspections carried out to ensure that restricted page links or buttons a
 
 **Registered and logged in users**
 
- On the opening page, they can click on Login to open the Login page. After successful login, manual testing took place to ensure that the message of successful login is displayed and Register and Login buttons are replaced by three buttons which are, 'Create a Post', 'Username' and 'Logout'. Visual inspection to ensure there is a Members link beside the Forum menu on the left is added to the menu.
+ On the opening page, they can click on Login to open the Login page. After successful login, manual testing took place to ensure that the message of successful login is displayed and Register and Login buttons are replaced by three buttons which are, 'Product management', 'My profile' and 'Logout'.
  Each button and link is manually tested to ensure it opens the appropriate page 
 
  #### Post List page
@@ -445,11 +450,8 @@ Access is attempted by copying the individual post address to ensure that the pa
 
 Visually inspected all post entries are correctly retrieved and displayed in the post.
 A View Profile button opens the selected users profile page.
-Ensure that the clicking like button increments the number only once and selecting it again removes the count by one.
-When submitting a comment, the feedback message displays in the comment panel so that the user is notified about the status of their comment.
-Once approved by superuser, the number of the comment increments by one and the comment displays in the Comments panel
 
-#### Create a Post page
+#### Create a Product page
 
 **For site visitor who has not logged in**
 
@@ -462,7 +464,7 @@ Attempting to create a post with a blank required field returns an error message
 File upload is successful without any issue.
 When ‘Create button’ is pressed and entry is successful, the page will redirect to ‘post list page’ with a message to notify the user about the status of the post
 
-#### Edit post page
+#### Edit product page
 
 **For site visitor who has not logged in**
 Access is attempted by copying the page address to ensure that the page is not displayed for the site visitors who are not logged in.
@@ -475,7 +477,7 @@ An Error message is used to inform users if a required field is left blank or an
 Upon successful update,  the page redirects to the post list page with a message to inform the users the update was successful.
 Delete this post link opens Delete post page
 
-#### Delete Post page
+#### Delete Product page
 
 **For site visitor who has not logged in**
 
@@ -485,16 +487,6 @@ Access is attempted by copying the page address to ensure that the page is not d
 Cancel and go back to post link opens the post list.
 Pressing Confirm Delete button actually deletes the selected post and associated comments and then returns post list page with message to notify the user the post is deleted
 
-#### Members Page
-
-**For site visitor who has not logged in**
-
-Access is attempted by copying the page address to ensure that the page is not displayed for the site visitors who are not logged in.
-
-**For registered and logged in users**
-
-Page displays with each member in a panel with their image, name and button to open their individual profile page.
-A Button to open individual profile page opens the profile of the selected member.
 
 #### View profile page
 
@@ -505,8 +497,6 @@ Access is attempted by copying the page address to ensure that the page is not d
 **For registered and logged in users**
 
 A user’s profile page displays when selected.
-
-A 'Back to profile list' link returns to the Member page
 
 #### Profile Edit page
 
@@ -520,9 +510,6 @@ Upload the image works without any issues.
 As all the fields are optional there is no error message present.
 Successful update will redirect to 'Post list' page with a notification message 
 
-#### About the Site page
-
-Page displays for any site visitors and information provided is clear
 
 #### Register page
 
