@@ -30,4 +30,5 @@ urlpatterns = [
     path('', include('footer_content.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler404 = 'world_cup_jerseys.views.handler404'
+#handler404 = 'world_cup_jerseys.views.handler404'
+#handler500 = 'world_cup_jerseys.views.error_500'
