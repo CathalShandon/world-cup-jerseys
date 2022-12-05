@@ -8,7 +8,7 @@ The payment system used for the site is called Stripe. The system is set up in a
 
 World Cup Jersey is an e-commerce site offering various confections.
 
-**View the live site [here](https://beara-bridle-trail.herokuapp.com/)**
+**View the live site [here](https://world-cup-jerseys.herokuapp.com/)**
 ![World Cup Jersey mockup images](static/images/mockup.png)
 
 
@@ -26,7 +26,11 @@ World Cup Jersey is an e-commerce site offering various confections.
     i. [Current Features](#features-existing)<br>
     ii. [Features to implement](#features-toimplement)<br>
 
-3. [Testing](#testing)<br>
+3. [Marketing Strategy](#marketeing)<br>
+
+4. [Qatar 2022](#qatar22)<br>
+
+5. [Testing](#testing)<br>
 
     i. [User Stories/feature testing](#user-stories-testing)<br>
     ii.  [Automated testing](#automated-testing)<br>
@@ -34,10 +38,10 @@ World Cup Jersey is an e-commerce site offering various confections.
     iv. [Validation testing  ](#validation-testing)<br>
     v. [Javascript testing](#js-testing)<br>
     vi. [Unfixed bugs](#unfixed-bugs)<br>
-4. [Deployment](#deployment)<br>
-5. [Technologies Used](#technology-used)<br>
-6. [Credits](#credits)<br>
-7. [Acknowledgements](#acknowledgements)<br>
+6. [Deployment](#deployment)<br>
+7. [Technologies Used](#technology-used)<br>
+8. [Credits](#credits)<br>
+9. [Acknowledgements](#acknowledgements)<br>
 
 # 1. User Experience (UX) <a name="ux"></a> 
 ### **Project goals:**
@@ -88,13 +92,11 @@ To create an online website that where user can login and buy jerseys.
 
 ## iv. Skeleton / Technical design <a name="skeleton"></a> 
 
-I used Balsamiq to create wireframes for my project in order to plan out the layout of the interface, navigation and information design of the site on desktop, tablets and mobile devices.
-Page | Desktop Version | Mobile Version
+Using the above as a guide, I have created a flow diagram to help me visualize how the user will navigate through the core functionality of the web store. During the Agile process, minor tweaks may occur to this pre-planned user journey, but the overall structure will remain the same.
+
+Page 
 --- | --- | ---
-Landing | ![Desktop about us in wireframe image](static/images/About_us_desktop.png) | ![Mobile about us page wireframe image](static/images/About_us_mobile.png)
-Sign Up | ![Desktop sign up wireframe image](static/images/Signup_desktop.png) | ![Mobile sign up wireframe image](static/images/Signup_mobile.png)
-Products | ![Desktop ask question wireframe image](static/images/trail_desktop.png) | ![Mobile ask question wireframe image](static/images/Trail_mobile.png)
-Product Post | ![Desktop open question wireframe image](static/images/Trail_post_desktop.png) | ![Mobile open question wireframe image](static/images/Trail_post_mobile.png)
+Structure | ![Structure](media/testing/userjourney.jpeg)
 
 
 # 2. Features <a name="features"></a> 
@@ -427,11 +429,11 @@ Visual inspections carried out to ensure that restricted page links or buttons a
  On the opening page, they can click on Login to open the Login page. After successful login, manual testing took place to ensure that the message of successful login is displayed and Register and Login buttons are replaced by three buttons which are, 'Product management', 'My profile' and 'Logout'.
  Each button and link is manually tested to ensure it opens the appropriate page 
 
- #### Post List page
+ #### Product List page
 
 **For site visitor who has not logged in**
 
-Visual inspections are carried out so that no links to the post detail page or edit post are present in each post in the list. 
+Visual inspections are carried out so that no links to the product detail page or edit product are present in each post in the list. 
 Ensure that all the posts displayed in the page are approved posts and information displayed is correct as created post
 
 **For registered and logged in users**
@@ -440,7 +442,7 @@ Ensure the post list is only displaying approved posts with correct information 
 A View button is present in each post and links will open the selected post detail page.
 For a currently logged in user’s own post, an Edit button is present in the post panel and selecting it will open the ‘Edit’ post page with selected post entry retrieved.
 
-#### Post Detail page
+#### Product Detail page
 
 **For a site visitor who has not logged in**
 
@@ -462,7 +464,7 @@ Access is attempted by copying the page address to ensure that the page is not d
 Entering an existing title field will return the error message to prompt the user to enter another title.
 Attempting to create a post with a blank required field returns an error message.
 File upload is successful without any issue.
-When ‘Create button’ is pressed and entry is successful, the page will redirect to ‘post list page’ with a message to notify the user about the status of the post
+When ‘Create button’ is pressed and entry is successful, the page will redirect to ‘product list page’ with a message to notify the user about the status of the post
 
 #### Edit product page
 
@@ -527,7 +529,40 @@ Upon successful login, the user is redirected to landing page with a notificatio
 Ensure logout will redirect to the landing page with a notification for their logout and restricted pages cannot be accessed.
 
 
-# 4. Deployment <a name="deployment"></a> 
+# 4. Marketing Strategy <a name="marketing"></a> 
+
+- ### FaceBook page
+
+![facebook home](media/marketing/facebook_home.png)
+
+![facebook post](media/marketing/facebook_page.png)
+
+
+- ### Email page
+
+- The thank you for subscribing email that is being sent from gmail to users who submits their email address looks like this:
+
+![email validation](static/images/html_validation.png)
+
+- ### Robots.txt page
+
+- Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their websites. The robots.txt file is part of the robots exclusion protocol (REP), a group of web standards that regulate how robots crawl the web, access, and index content, and serve that content up to users.
+
+- ### Sitemap.xml page
+
+- An XML sitemap is a file that lists a website’s essential pages, making sure Google can find and crawl them all. It also helps search engines understand your website structure. You want Google to crawl every important page of your website. But sometimes, pages end up without internal links pointing to them, making them hard to find. A sitemap can help speed up content discovery.
+
+- ### Privacy Policy page
+
+- A privacy policy page helps visitors trust the website.Its good to have a privacy policy page if you're collecting any form of personal information including: Names. Email addresses
+
+# 5. Qatar 2022<a name="qatar"></a> 
+
+- It is safe to say no World Cup has generated as much debate and controversy before a ball is kicked as the finals in Qatar, thats why I choose a page to show the problems with holding the world cup in this country. I used very little styling on this page as I wanted to get the points to stand out.
+
+![qatar-2022](media/marketing/qatar_2022.png)
+
+# 6. Deployment <a name="deployment"></a> 
 
 - ### Github
 
@@ -723,105 +758,55 @@ Stripe is used to handle the checkout process when a payment is made. A Stripe a
    STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
-# 5. Technologies Used <a name="technology-used"></a>  <a name="Home"></a>
+# 7. Technologies Used <a name="technology-used"></a>  <a name="Home"></a>
 ## Languages
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML)
-* [CSS3](https://en.wikipedia.org/wiki/CSS)
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+  * [Bootstrap](https://getbootstrap.com/)
+  * [CSS](https://en.wikipedia.org/wiki/CSS)
+  * [Django](https://www.djangoproject.com/)
+  * [HTML5](https://en.wikipedia.org/wiki/HTML5)
+  * [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+  * [JQuery](https://en.wikipedia.org/wiki/JQuery)
+  * [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 
 ### Libraries and Frameworks
 
-* [Django](https://www.djangoproject.com/)   
-    * Django was used as web framework.
-
-* [Django Template](https://jinja.palletsprojects.com)  
-    * Django Template was used as a templating language for Django to display backend data to HTML.
-   
-* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
-    * Bootstrap 5 was used throughout the website to help with styling and responsiveness.
-
-* [Google Fonts](https://fonts.google.com)  
-    * Google fonts was used to import the fonts into the html file, and were used on all parts of the site.
-
-* [Font Awesome](https://fontawesome.com)  
-    * Font Awesome was used throughout the website to add icons for aesthetic and UX purposes. 
-
-* [jQuery 3.6.0](https://jquery.com/)  
-    * jQuery was used as a JavaScript library to help writing less JavaScript code.  
-
-
-### Packages / Dependecies Installed
-
-* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
-    * Django Allauth was used for user authentication, registration, and account management.
-
-* [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/)   
-    * Django Crispy Form was used to control the rendering of the forms. 
- 
-* [Gunicorn](https://gunicorn.org/)  
-    * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
-
-* [Summernote](https://summernote.org/) 
-    * Summernote has been used as WYSIWYG editor.
-
-* [Cloudinary](https://cloudinary.com/)
-    * Cloudinary has been used as image management solution
-
-### Database Management
-* [Heroku Postgres](https://www.heroku.com/postgres)   
-    * Heroku Postgres database was used in production, as a service based on PostgreSQL provided by Heroku.
+*  [AllAuth](https://www.intenct.nl/projects/django-allauth/) - Django app used for local authentication.
+  * [Am I Responsive](http://ami.responsivedesign.is/) - Used to verify responsiveness of website on different devices.
+  * [Balsamiq](https://balsamiq.com/) - Used to generate Wireframe images.
+  * [Browser Stack](https://www.browserstack.com/) - Used for Cross Site Browser Testing.
+  * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and tweaking, including testing responsiveness and performance.
+  * [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Django app to allow control over rendering behaviour of django forms.
+  * [Django Quill Editor](https://github.com/LeeHanYeong/django-quill-editor) - WYSIWYG editor added for easy updating of text only content on the site.
+  * [Favicon.io](https://favicon.io) - Used to generate Favicon image.
+  * [Flake8](https://github.com/pycqa/flake8) - Linter used to check style and quality of code.
+  * [Flake8 HTML](https://pypi.org/project/flake8-html/) - Tool to output Flake8 test report.
+  * [Font Awesome](https://fontawesome.com/) - Used for icons on multiple pages.
+  * [GitHub](https://github.com/) - Used for version control.
+  * [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server
+  * [Heroku](https://heroku.com) - Used for deployment and hosting of the project.
+  * [JQuery](https://en.wikipedia.org/wiki/JQuery) - Used to simplify definition of DOM elements, but used minimally with a preference for vanilla Javascript.
+  * [JSHint](https://jshint.com/about/) - Linter used to flag errors, bugs and warnings in Javascript code.
+  * [Pillow](https://pypi.org/project/Pillow/) - Python Imaging Library to add image processing capabilities to the project.
+  * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Used for consistent code formatting.
+  * [Slack](https://slack.com/) - Used for support and advice from the Code Insitute Community.
+  * [Sorted M2M Filter Horizontal Widget](https://pypi.org/project/django-sortedm2m-filter-horizontal-widget/) - Django admin widget to allow horizontal sorting of products and ingredients.
+  * [Stripe](https://stripe.com/) - Payment Processing Platform used to handle card details in the checkout app.
+  * [Visual Studio Code](https://code.visualstudio.com/) - Application used for development of this site.
+  * [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+  * [WAVE](https://wave.webaim.org/) - Used for Accessibility evaluation.
+  * [Woosmap](https://www.woosmap.com/) - Provided address searching API for checkout app.
 
 
-### Tools and Programs
-
-* [Git](https://git-scm.com)  
-    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub. 
-
-* [GitPod](https://gitpod.io/)
-     * GitPod was used for writing code, committing, and then pushing to GitHub.
-
-* [GitHub](https://github.com)  
-   GitHub was used to store the projects code after being pushed from Git. 
-
-* [Heroku](https://www.heroku.com)   
-    * Heroku was used to deploy the website.
-
-* [Am I Responsive](ami.responsivedesign.is)  
-    * Am I Responsive was used to preview the website across a variety of popular devices.
-
-* [Tiny PNG](https://tinypng.com)    
-    * Tiny PNG was used to reduce the file size of the images.
-
-* [Coolors](https://coolors.co)  
-    * Coolors was used to create a color scheme for the website.
-
-* [Balsamiq](https://balsamiq.com/)
-     * Balsamiq was used to create the wireframes during the design phase of the project
-
-* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-    * Chrome DevTools was used during development process for code review and to test responsiveness.
-
-* [W3C Markup Validator](https://validator.w3.org/)
-    * W3C Markup Validator was used to validate the HTML code.
-
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-    * W3C CSS Validator was used to validate the CSS code.
-
-* [JSHint](https://jshint.com/) 
-    * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
-
-* [Favicon.cc](https://www.favicon.cc/) 
-    * Favicon.cc was used to create the site favicon.
+#
 
 
-# 6. Credits <a name="credits"></a>
+# 8. Credits <a name="credits"></a>
 See below list of tutorials and documentation i used throughout this project
 - The basic skelton setup for this project was based on  “I think therefore I blog project by the Code Institute 
 - I used and adapted code for the navbar , emails and search Boutique Ado project by the Code Institute
 
 
-# 7. Acknowledgements <a name="acknowledgements"></a>
+# 9. Acknowledgements <a name="acknowledgements"></a>
 I would like to thank Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 I would also like to thank my tutor Marcel for his invaluable support, feedback and guidance through the whole process.
