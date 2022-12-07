@@ -376,7 +376,12 @@ Throughout the site is tested to ensure all pages are displayed appropriately in
 
 The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML code of the project in order to ensure there were no syntax errors.
 
-![index.html validation](media/testing/html_test.png)
+![index.html validation1](media/testing/hmtl1.png)
+![index.html validation2](media/testing/html2.png)
+![index.html validation3](media/testing/html3.png)
+![index.html validation4](media/testing/html4.png)
+![index.html validation5](media/testing/html5.png)
+![index.html validation6](media/testing/html6.png)
 
 
 ### CSS
