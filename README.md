@@ -9,7 +9,7 @@ The payment system used for the site is called Stripe. The system is set up in a
 World Cup Jersey is an e-commerce site offering various confections.
 
 **View the live site [here](https://world-cup-jerseys.herokuapp.com/)**
-![World Cup Jersey mockup images](static/images/mockup.png)
+![World Cup Jersey mockup images](media/marketing/home_display.png)
 
 
 
@@ -376,7 +376,7 @@ Throughout the site is tested to ensure all pages are displayed appropriately in
 
 The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML code of the project in order to ensure there were no syntax errors.
 
-![index.html validation](static/images/html_validation.png)
+![index.html validation](media/testing/html_test.png)
 
 
 ### CSS
@@ -390,22 +390,16 @@ W3C CSS Validator found no errors or warnings on my CSS.
 ### Javascript 
 Checking my JS files with jshint
 
-![JS validation image](media/testing/js-testing.png)
+![JS validation image](media/testing/js_tes.png)
 
-### Python
 
-Pylint was used continuously during the development process to analyze the Python code for programming errors.
+### Lighthouse 
+Checking lighthouse 
 
-[PEP8 online](http://pep8online.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
-
-| Location | Errors / Warnings | Code Reviewed |
-| --- | --- | --- |
-| admin.py | No errors / warnings |![admin.py code reviewed image](static/images/admin.png) |
-| forms.py | No errors / warnings| ![forms.py code reviewed image](static/images/form.png) |
-| models.py | No errors / warnings | ![models.py code reviewed image](static/images/model.png) |
-| urls.py | No errors / warnings| ![urls.py code reviewed image](static/images/url.png) |
-| views.py | No errors / warnings| ![views.py code reviewed image](static/images/Views.png) |
-
+![lighthouse_jerseys ](media/testing/lighthouse_product.png)
+![lighthouse_detail](media/testing/lighthouse_product_detail.png)
+![lighthouse_bag](media/testing/lighouthouse_bag.png)
+![lighthouse_qatar](media/testing/lighthouse_qatar.png)
 
 ## Accessibility
 
