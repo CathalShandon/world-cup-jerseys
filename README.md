@@ -459,7 +459,7 @@ A View Profile button opens the selected users profile page.
 
 Access is attempted by copying the page address to ensure that the page is not displayed for the site visitors who are not logged in.
 
-**For registered and logged in users**
+**For superusers**
 
 Entering an existing title field will return the error message to prompt the user to enter another title.
 Attempting to create a post with a blank required field returns an error message.
@@ -471,7 +471,7 @@ When ‘Create button’ is pressed and entry is successful, the page will redir
 **For site visitor who has not logged in**
 Access is attempted by copying the page address to ensure that the page is not displayed for the site visitors who are not logged in.
 
-**For registered and logged in users** 
+**For superusers**
 
 Displayed edit post page has corresponding selected post entries in each field.
 Removing the required fields does not let a user to update the post.
@@ -485,7 +485,7 @@ Delete this post link opens Delete post page
 
 Access is attempted by copying the page address to ensure that the page is not displayed for the site visitors who are not logged in. 
 
-**For registered and logged in users**
+**For superusers**
 Cancel and go back to post link opens the post list.
 Pressing Confirm Delete button actually deletes the selected post and associated comments and then returns post list page with message to notify the user the post is deleted
 
@@ -542,7 +542,8 @@ Ensure logout will redirect to the landing page with a notification for their lo
 
 - The thank you for subscribing email that is being sent from gmail to users who submits their email address looks like this:
 
-![email validation](static/images/html_validation.png)
+![email sent](media/marketing/email_sent.png)
+![email validation](media/marketing/email_conf.png)
 
 - ### Robots.txt page
 
